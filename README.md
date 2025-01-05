@@ -36,10 +36,18 @@ cd Youtube-clone
 ### 2. Install dependencies for the backend:
 ```bash
 cd backend
-npm run sever
+npm install
 ```
-### 3. Install dependencies for the frontend:
+### 3. Run backend server:
+```bash
+npm run server
+```
+### 4. Install dependencies for the frontend:
 ```bash
 cd frontend
+npm install
+```
+### 5. Run frontend:
+```bash
 npm run dev
 ```
