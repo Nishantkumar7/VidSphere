@@ -19,7 +19,7 @@ const ChannelVideo = ({ triggerVideoFetching, item, channelData }) => {
   const handleDelete = async (videoId) => {
     try {
       const result = await axios.delete(
-        `http://localhost:3000/api/video/deleteVideo/${videoId}/${channelData?._id}/${user?._id}`,
+        `https://youtube-clone-backend-2jgd.onrender.com/api/video/deleteVideo/${videoId}/${channelData?._id}/${user?._id}`,
         {
           headers: {
             Authorization: `JWT ${token}`,

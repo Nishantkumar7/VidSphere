@@ -33,7 +33,7 @@ const UpdateChannel = () => {
   // function to fetch channel details
   const fetchChannelData = async () => {
     const { data } = await axios.get(
-      `http://localhost:3000/api/channel/${params.id}`
+      `https://youtube-clone-backend-2jgd.onrender.com/api/channel/${params.id}`
     );
     if (data) {
       setFormData({
@@ -57,7 +57,7 @@ const UpdateChannel = () => {
 
     try {
       let result = await axios.put(
-        `http://localhost:3000/api/channel/updateChannel/${params.id}/${user._id}`,
+        `https://youtube-clone-backend-2jgd.onrender.com/api/channel/updateChannel/${params.id}/${user._id}`,
         formData,
         {
           headers: {

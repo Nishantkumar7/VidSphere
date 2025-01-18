@@ -11,7 +11,7 @@ const SearchVideoView = ({ item }) => {
     // fetch channel with id
     const fetchData = async () => {
       const { data } = await axios.get(
-        `http://localhost:3000/api/channel/${item?.channelId}`
+        `https://youtube-clone-backend-2jgd.onrender.com/api/channel/${item?.channelId}`
       );
       if (data) {
         setChannelData(data.channel);

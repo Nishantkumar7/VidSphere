@@ -23,7 +23,7 @@ const UpdateVideoForm = () => {
   useEffect(() => {
     const fetchData = async () => {
       const { data } = await axios.get(
-        `http://localhost:3000/api/video/${params.id}`
+        `https://youtube-clone-backend-2jgd.onrender.com/api/video/${params.id}`
       );
 
       if (data.video.uploader !== user._id) {
@@ -53,7 +53,7 @@ const UpdateVideoForm = () => {
 
     try {
       let result = await axios.put(
-        `http://localhost:3000/api/video/updateVideo/${params.id}/${userChannel?._id}/${user?._id}`,
+        `https://youtube-clone-backend-2jgd.onrender.com/api/video/updateVideo/${params.id}/${userChannel?._id}/${user?._id}`,
         formData,
         {
           headers: {
