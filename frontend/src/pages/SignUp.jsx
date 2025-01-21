@@ -45,6 +45,7 @@ const SignUp = () => {
       );
       if (data) {
         toast.success(data.message);
+        navigate("/login");
       }
     } catch (error) {
       console.log(error);
