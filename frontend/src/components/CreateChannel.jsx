@@ -98,7 +98,7 @@ const CreateChannel = () => {
             value={formData.channelLogo}
             onChange={handleChange}
             placeholder="Enter logo URL"
-            className="mt-4 w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200"
+            className="mt-4 w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200"
             required
           />
         </div>
@@ -114,7 +114,7 @@ const CreateChannel = () => {
             value={formData.channelName}
             onChange={handleChange}
             placeholder="Enter channel name"
-            className="w-full px-4 py-2 mt-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200"
+            className="w-full px-4 py-2 mt-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200"
             required
           />
         </div>
@@ -130,7 +130,7 @@ const CreateChannel = () => {
             value={formData.channelBanner}
             onChange={handleChange}
             placeholder="Enter banner URL"
-            className="w-full px-4 py-2 mt-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200"
+            className="w-full px-4 py-2 mt-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200"
             required
           />
         </div>
@@ -145,7 +145,7 @@ const CreateChannel = () => {
             value={formData.description}
             onChange={handleChange}
             placeholder="Describe your channel"
-            className="w-full px-4 py-2 mt-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-200"
+            className="w-full px-4 py-2 mt-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-200"
             rows="4"
             required
           />
@@ -153,7 +153,7 @@ const CreateChannel = () => {
 
         <button
           type="submit"
-          className="bg-red-600 text-white py-2 rounded-md font-medium transition duration-300 hover:bg-red-700 focus:outline-none shadow-md"
+          className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold px-6 py-3 rounded-md hover:opacity-90"
         >
           Create Channel
         </button>

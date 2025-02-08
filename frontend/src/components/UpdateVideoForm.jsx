@@ -84,14 +84,14 @@ const UpdateVideoForm = () => {
         onSubmit={handleFormSubmit}
         className="bg-white rounded-lg shadow-lg p-8 w-full sm:w-3/4 lg:w-1/2"
       >
-        <h2 className="text-3xl font-semibold text-red-600 mb-6 text-center">
+        <h2 className="text-3xl font-semibold text-black mb-6 text-center">
           Edit Video
         </h2>
 
         <div className="mb-6 text-center">
           <img
             className="w-24 h-24 rounded-full mx-auto"
-            src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" // YouTube's red play button
+            src="/images/vdsphere.png"
             alt="video thumbnail"
           />
         </div>
@@ -101,7 +101,7 @@ const UpdateVideoForm = () => {
             Video Title
           </label>
           <input
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="title"
             type="text"
             required
@@ -116,7 +116,7 @@ const UpdateVideoForm = () => {
             Thumbnail URL
           </label>
           <input
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="thumbnailUrl"
             type="url"
             required
@@ -131,7 +131,7 @@ const UpdateVideoForm = () => {
             Video URL
           </label>
           <input
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="videoUrl"
             type="url"
             required
@@ -147,7 +147,7 @@ const UpdateVideoForm = () => {
           </label>
           <select
             name="category"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             required
             value={formData.category}
             onChange={handleChange}
@@ -173,7 +173,7 @@ const UpdateVideoForm = () => {
           </label>
           <textarea
             rows={5}
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="description"
             required
             value={formData.description}
@@ -184,7 +184,7 @@ const UpdateVideoForm = () => {
 
         <button
           type="submit"
-          className="w-full py-3 px-4 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-600"
+          className="w-full p-3 rounded-md bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-bold text-lg hover:from-cyan-500 hover:to-purple-700 transition-all"
         >
           Save Changes
         </button>

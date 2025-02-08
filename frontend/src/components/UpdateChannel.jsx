@@ -86,7 +86,7 @@ const UpdateChannel = () => {
 
         <div className="flex justify-center mb-6">
           <img
-            className="w-32 h-32 rounded-full border-4 border-red-600"
+            className="w-32 h-32 rounded-full border-4 border-purple-500"
             src={
               formData?.channelLogo ||
               "https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI="
@@ -103,7 +103,7 @@ const UpdateChannel = () => {
             Channel Name
           </label>
           <input
-            className="w-full p-3 rounded-md border bg-white border-[#ccc] text-black focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="w-full p-3 rounded-md border bg-white border-[#ccc] text-black focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="channelName"
             type="text"
             required
@@ -121,7 +121,7 @@ const UpdateChannel = () => {
             Channel Logo (URL)
           </label>
           <input
-            className="w-full p-3 rounded-md border bg-white border-[#ccc] text-black focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="w-full p-3 rounded-md border bg-white border-[#ccc] text-black focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="channelLogo"
             type="url"
             required
@@ -139,7 +139,7 @@ const UpdateChannel = () => {
             Channel Banner (URL)
           </label>
           <input
-            className="w-full p-3 rounded-md border bg-white border-[#ccc] text-black focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="w-full p-3 rounded-md border bg-white border-[#ccc] text-black focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="channelBanner"
             type="url"
             required
@@ -157,7 +157,7 @@ const UpdateChannel = () => {
             Channel Description
           </label>
           <textarea
-            className="w-full p-3 rounded-md border bg-white border-[#ccc] text-black focus:outline-none focus:ring-2 focus:ring-red-600"
+            className="w-full p-3 rounded-md border bg-white border-[#ccc] text-black focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="description"
             required
             value={formData.description}
@@ -169,7 +169,7 @@ const UpdateChannel = () => {
 
         <button
           type="submit"
-          className="w-full p-3 rounded-md bg-red-600 text-white font-bold text-lg hover:bg-red-700 transition-all"
+          className="w-full p-3 rounded-md bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-bold text-lg hover:from-cyan-500 hover:to-purple-700 transition-all"
         >
           Update Channel
         </button>

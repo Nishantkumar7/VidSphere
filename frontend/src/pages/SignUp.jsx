@@ -66,13 +66,13 @@ const SignUp = () => {
       >
         <div className="flex justify-center mb-8">
           <img
-            src="https://cdn.iconscout.com/icon/free/png-256/free-youtube-logo-icon-download-in-svg-png-gif-file-formats--social-media-70-flat-icons-color-pack-logos-432560.png?f=webp&w=256"
-            alt="YouTube Logo"
+            src="/images/vdsphere.png"
+            alt="VidSphere"
             className="w-16 h-16"
           />
         </div>
         <h2 className="text-3xl text-gray-800 font-semibold text-center mb-6">
-          Sign up for YouTube
+          Sign up for VidSphere
         </h2>
 
         <label className="text-gray-700 font-semibold mb-2" htmlFor="userName">
@@ -80,7 +80,7 @@ const SignUp = () => {
         </label>
         <input
           required
-          className="border border-gray-300 p-3 bg-[#fafafa] rounded-md mb-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500"
+          className="border border-gray-300 p-3 bg-[#fafafa] rounded-md mb-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
           value={formData.userName}
           onChange={handleChange}
           name="userName"
@@ -94,7 +94,7 @@ const SignUp = () => {
         </label>
         <input
           required
-          className="border border-gray-300 p-3 bg-[#fafafa] rounded-md mb-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500"
+          className="border border-gray-300 p-3 bg-[#fafafa] rounded-md mb-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
           id="email"
           type="email"
           value={formData.email}
@@ -108,7 +108,7 @@ const SignUp = () => {
         </label>
         <input
           required
-          className="border border-gray-300 p-3 bg-[#fafafa] rounded-md mb-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500"
+          className="border border-gray-300 p-3 bg-[#fafafa] rounded-md mb-4 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
           id="password"
           type="password"
           value={formData.password}
@@ -122,7 +122,7 @@ const SignUp = () => {
         </label>
         <input
           required
-          className="border border-gray-300 p-3 bg-[#fafafa] rounded-md mb-6 text-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500"
+          className="border border-gray-300 p-3 bg-[#fafafa] rounded-md mb-6 text-gray-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
           id="avatar"
           type="text"
           value={formData.avatar}
@@ -132,7 +132,7 @@ const SignUp = () => {
         />
         <button
           type="submit"
-          className="bg-red-600 text-white p-3 rounded-md mb-4 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+          className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold px-6 py-3 rounded-md hover:opacity-90"
         >
           Sign Up
         </button>
@@ -140,7 +140,7 @@ const SignUp = () => {
           Already have an account?{" "}
           <Link
             to="/login"
-            className="font-semibold text-red-600 hover:text-red-700 transition duration-300"
+            className="font-semibold text-purple-600 transition duration-300 hover:opacity-90"
           >
             Login here
           </Link>

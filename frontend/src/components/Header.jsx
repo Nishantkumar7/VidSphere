@@ -69,15 +69,15 @@ export default function ({ sideBarToggle, setSideBarToggle }) {
         />
         <Link to={"/"}>
           <img
-            src="/images/ytLogoSmall.webp"
-            alt="Youtube"
+            src="/images/vdsphere.png"
+            alt="VidSphere"
             className="block xs:hidden w-8 xs:w-24"
           />
         </Link>
         <Link to={"/"}>
           <img
-            src="/images/youtubeLogo.png"
-            alt="Youtube"
+            src="/images/VidSphere.png"
+            alt="VidSphere"
             className="hidden xs:block w-12 xs:w-24"
           />
         </Link>

@@ -185,7 +185,7 @@ const VideoView = () => {
         <iframe
           className="w-full h-[60vh] md:h-[70vh] rounded-lg"
           src={`https://www.youtube.com/embed/${videoUrl}?autoplay=1&rel=0`}
-          title="YouTube video player"
+          title="video player"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
@@ -199,7 +199,8 @@ const VideoView = () => {
             </Link>
             <button
               onClick={handleSubscribe}
-              className="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 transition duration-300"
+              className="bg-gradient-to-r from-[#00e0ff] to-[#d946ef] text-white px-4 py-2 rounded-full hover:from-[#00c4e6] hover:to-[#c026d3] transition duration-300"
+
             >
               Subscribe
             </button>
@@ -233,7 +234,7 @@ const VideoView = () => {
               onChange={(e) => setcomment(e.target.value)}
               className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none"
             />
-            <button onClick={handleComment} className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition duration-300">
+            <button onClick={handleComment} className="bg-gradient-to-r from-[#00e0ff] to-[#d946ef] text-white px-4 py-2 rounded-full hover:from-[#00c4e6] hover:to-[#c026d3] transition duration-300">
               Comment
             </button>
           </div>

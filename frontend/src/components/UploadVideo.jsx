@@ -94,7 +94,7 @@ const UploadVideo = () => {
             Video Title
           </label>
           <input
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="title"
             type="text"
             required
@@ -112,7 +112,7 @@ const UploadVideo = () => {
             Thumbnail URL
           </label>
           <input
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="thumbnailUrl"
             type="url"
             required
@@ -130,7 +130,7 @@ const UploadVideo = () => {
             Video URL
           </label>
           <input
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="videoUrl"
             type="url"
             required
@@ -149,7 +149,7 @@ const UploadVideo = () => {
           </label>
           <select
             name="category"
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
             required
             value={formData.category}
             onChange={handleChange}
@@ -178,7 +178,7 @@ const UploadVideo = () => {
           </label>
           <textarea
             rows={5}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
             id="description"
             value={formData.description}
             required
@@ -189,7 +189,7 @@ const UploadVideo = () => {
 
         <button
           type="submit"
-          className="w-full py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+          className="w-full p-3 rounded-md bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-bold text-lg hover:from-cyan-500 hover:to-purple-700 transition-all"
         >
           Upload Video
         </button>

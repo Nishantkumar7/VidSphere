@@ -61,20 +61,20 @@ const Login = () => {
       >
         <div className="flex justify-center mb-8">
           <img
-            src="https://cdn.iconscout.com/icon/free/png-256/free-youtube-logo-icon-download-in-svg-png-gif-file-formats--social-media-70-flat-icons-color-pack-logos-432560.png?f=webp&w=256"
-            alt="YouTube Logo"
+            src="/images/vdsphere.png"
+            alt="VidSphere"
             className="w-32"
           />
         </div>
         <h2 className="text-2xl font-semibold text-center text-black mb-6">
-          Sign in to YouTube
+          Sign in to VidSphere
         </h2>
 
         <label className="text-black font-semibold mb-2" htmlFor="email">
           Email or Phone
         </label>
         <input
-          className="border p-3 border-gray-300 rounded-md mb-4 focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
           id="email"
           type="email"
           required
@@ -87,7 +87,7 @@ const Login = () => {
           Password
         </label>
         <input
-          className="border p-3 border-gray-300 rounded-md mb-6 focus:ring-2 focus:ring-blue-500"
+          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 mb-6"
           id="password"
           type="password"
           value={formData.password}
@@ -99,14 +99,14 @@ const Login = () => {
 
         <button
           type="submit"
-          className="hover:bg-[#c0392b] hover:text-white transition-all text-white rounded-sm bg-[#cc0000]  p-3 mb-4"
+          className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold px-6 py-3 rounded-md hover:opacity-90"
         >
           Sign In
         </button>
 
         <p className="text-center">
           Don't have an account?{" "}
-          <Link to="/signUp" className="font-semibold text-[#cc0000]">
+          <Link to="/signUp" className="font-semibold text-purple-600">
             Sign Up
           </Link>
         </p>

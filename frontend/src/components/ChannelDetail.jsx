@@ -104,13 +104,13 @@ const ChannelDetail = () => {
                     <>
                       <Link
                         to={"/uploadVideo"}
-                        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-semibold"
+                        className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-semibold px-6 py-3 rounded-md hover:opacity-90"
                       >
                         Upload Video
                       </Link>
                       <Link
                         to={`/updateChannel/${channelData?._id}`}
-                        className="bg-gray-200 hover:bg-gray-300 text-gray-900 px-6 py-3 rounded-md font-semibold"
+                        className="border-2 border-purple-600 text-purple-600 font-semibold px-6 py-3 rounded-md hover:bg-purple-50"
                       >
                         Edit Channel
                       </Link>
