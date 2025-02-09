@@ -71,7 +71,7 @@ const Login = () => {
         </h2>
 
         <label className="text-black font-semibold mb-2" htmlFor="email">
-          Email or Phone
+          Email
         </label>
         <input
           className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"

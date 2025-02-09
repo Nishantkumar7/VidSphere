@@ -1,111 +1,118 @@
+import {
+  MdHome,
+  MdOutlineUploadFile,
+  MdAnalytics,
+  MdSettings,
+  MdMonetizationOn,
+} from "react-icons/md";
+import { FaUserFriends } from "react-icons/fa";
+import { BiTrendingUp } from "react-icons/bi";
 import { PiFilmSlate } from "react-icons/pi";
-import { CiSettings } from "react-icons/ci";
-import { LuShoppingBag } from "react-icons/lu";
-import { IoFlagOutline } from "react-icons/io5";
-import { IoIosHelpCircleOutline } from "react-icons/io";
-import { IoMdMusicalNotes } from "react-icons/io";
-import { FaHistory } from "react-icons/fa";
-import { MdOutlineLocalFireDepartment } from "react-icons/md";
-import { MdOutlineOndemandVideo, MdOutlinePlaylistPlay, MdHome, MdOutlineWatchLater, MdOutlineSubscriptions } from "react-icons/md";
-import { SiYoutubeshorts } from "react-icons/si";
-import { AiOutlineLike } from "react-icons/ai";
+import { RiLiveLine } from "react-icons/ri";
+import { HiOutlineChatAlt2 } from "react-icons/hi";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Sidebar = ({ sideBarToggle }) => {
+  const menuItems = [
+    {
+      label: "Home",
+      icon: <MdHome size={20} />,
+      link: "/",
+    },
+    {
+      section: "Creator Tools",
+    },
+    {
+      label: "Content Library",
+      icon: <MdOutlineUploadFile size={20} />,
+    },
+    {
+      label: "Go Live",
+      icon: <RiLiveLine size={20} />,
+    },
+    {
+      label: "Create Series",
+      icon: <PiFilmSlate size={20} />,
+    },
+    {
+      section: "Explore",
+    },
+    {
+      label: "Trending Now",
+      icon: <BiTrendingUp size={20} />,
+    },
+    {
+      label: "Creators",
+      icon: <FaUserFriends size={20} />,
+    },
+    {
+      label: "Community",
+      icon: <AiOutlineUsergroupAdd size={20} />,
+    },
+    {
+      label: "Chat Rooms",
+      icon: <HiOutlineChatAlt2 size={20} />,
+    },
+    {
+      section: "Insights",
+    },
+    {
+      label: "Analytics",
+      icon: <MdAnalytics size={20} />,
+    },
+    {
+      label: "Monetization",
+      icon: <MdMonetizationOn size={20} />,
+    },
+    {
+      section: "Support",
+    },
+    {
+      label: "Settings",
+      icon: <MdSettings size={20} />,
+    },
+  ];
+
+  const menuItemClass = `
+    relative flex items-center gap-3 px-3 py-2 rounded-md 
+    text-gray-800 hover:bg-gray-100 transition-all duration-200 group
+  `;
+
+  const activeIndicator = `
+    absolute left-0 top-0 h-full w-1 bg-gradient-to-b 
+    from-[#00e0ff] to-[#d946ef] opacity-0 group-hover:opacity-100 transition
+  `;
+
   return (
     <div
-      className={`h-full hidden overflow-y-scroll py-3 w-72 pl-6 pr-2 bg-gray-50 text-gray-800 ${
-        sideBarToggle ? "hidden" : "sm:flex"
-      } flex-col gap-2 shadow-md`}
+      className={`sidebar-scroll h-full hidden overflow-y-auto py-4 w-72 pl-5 pr-3 bg-gray-50 text-gray-800 ${
+    sideBarToggle ? "hidden" : "sm:flex"
+      } flex-col gap-2`}
     >
-      <Link
-        to="/"
-        className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all"
-      >
-        <MdHome size={22} />
-        <span className="font-medium">Home</span>
-      </Link>
-      <div className="menu-section">
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <SiYoutubeshorts size={20} />
-          <span className="font-medium">Shorts</span>
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <MdOutlineSubscriptions size={20} />
-          <span className="font-medium">Subscriptions</span>
-        </div>
-      </div>
+      {menuItems.map((item, index) =>
+        item.section ? (
+          <div
+            key={index}
+            className="text-xs font-semibold text-gray-500 mt-4 mb-1 px-3 uppercase tracking-wider"
+          >
+            {item.section}
+          </div>
+        ) : (
+          <Link to={item.link || "#"} key={index} className={menuItemClass}>
+            <div className="text-[#d946ef]">{item.icon}</div>
+            <span className="font-medium group-hover:text-[#00e0ff] transition">{item.label}</span>
+          </Link>
+        )
+      )}
 
-      <div className="border-t my-3"></div>
-
-      <div className="menu-section">
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <FaHistory size={20} />
-          <span className="font-medium">History</span>
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <MdOutlinePlaylistPlay size={20} />
-          <span className="font-medium">Playlist</span>
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <MdOutlineOndemandVideo size={20} />
-          <span className="font-medium">Your Videos</span>
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <MdOutlineWatchLater size={20} />
-          <span className="font-medium">Watch Later</span>
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <AiOutlineLike size={20} />
-          <span className="font-medium">Liked Videos</span>
-        </div>
-      </div>
-
-      <div className="border-t my-3"></div>
-
-      <div className="menu-section">
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <MdOutlineLocalFireDepartment size={20} />
-          <span className="font-medium">Trending</span>
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <LuShoppingBag size={18} />
-          <span className="font-medium">Shopping</span>
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <IoMdMusicalNotes size={20} />
-          <span className="font-medium">Music</span>
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <PiFilmSlate size={20} />
-          <span className="font-medium">Movies</span>
-        </div>
-      </div>
-
-      <div className="border-t my-3"></div>
-
-      <div className="menu-section">
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <CiSettings size={20} />
-          <span className="font-medium">Settings</span>
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <IoFlagOutline size={20} />
-          <span className="font-medium">Report History</span>
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 transition-all">
-          <IoIosHelpCircleOutline size={20} />
-          <span className="font-medium">Help</span>
-        </div>
-      </div>
-
-      <div className="border-t my-3"></div>
+      <div className="border-t border-gray-200 my-4"></div>
 
       <div className="text-xs text-gray-500 px-3">
-        About &nbsp; • &nbsp; Privacy &nbsp; • &nbsp; Terms
+        Terms &nbsp; • &nbsp; Privacy &nbsp; • &nbsp; Support
       </div>
-      <div className="text-xs text-gray-500 px-3">
-        © 2025 Google LLC
+      <div className="text-xs text-gray-500 px-3 mt-1">
+        © 2025 VidSphere Inc.
       </div>
     </div>
   );
