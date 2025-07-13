@@ -8,7 +8,7 @@
   },
   "author": "Nishant Kumar",
   "license": "ISC",
-  "description": "backend for youtube clone developed by Nishant Kumar",
+  "description": "backend for VidSphere developed by Nishant Kumar",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
