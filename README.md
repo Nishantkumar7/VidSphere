@@ -1,11 +1,11 @@
-# YouTube Clone
+# VidSphere
 
-A full-featured YouTube clone built using the MERN (MongoDB, Express.js, React, Node.js) stack and styled with TailwindCSS. This project replicates the functionality of YouTube, offering features like video uploads, playback, user authentication, comments, and more.
+VidSphere is a full-featured video streaming platform built with the MERN stack (MongoDB, Express.js, React, Node.js) and styled using TailwindCSS. It offers seamless video upload and playback, personalized channels, user interaction features like likes, comments, and a secure authentication system — all wrapped in a responsive, modern UI.
 
 ---
 
 # Live Link
-https://youtube-clone-gwrm.onrender.com/
+https://vidsphere-uyar.onrender.com/
 
 ---
 
@@ -35,8 +35,8 @@ https://youtube-clone-gwrm.onrender.com/
 
 ### 1. Clone the repository:
  ```bash
-git clone https://github.com/Nishantkumar7/Youtube-clone.git
-cd Youtube-clone
+git clone https://github.com/Nishantkumar7/VidSphere.git
+cd VidSphere
  ```
 ### 2. Install dependencies for the backend:
 ```bash
