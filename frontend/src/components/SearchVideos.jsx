@@ -13,7 +13,7 @@ const SearchVideos = () => {
     const fetchVideos = async () => { 
       try {
         const { data } = await axios.get(
-          `https://youtube-clone-backend-2jgd.onrender.com/api/video/search/${params.searchItem}`
+          `https://vidsphere-backend-1l9p.onrender.com/api/video/search/${params.searchItem}`
         );
         if (data) {
           setSearchvideos(data.videos);

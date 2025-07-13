@@ -16,7 +16,7 @@ const ChannelDetail = () => {
     const fetchChannelData = async () => {
       try {
         const { data } = await axios.get(
-          `https://youtube-clone-backend-2jgd.onrender.com/api/channel/${params.id}`
+          `https://vidsphere-backend-1l9p.onrender.com/api/channel/${params.id}`
         );
         if (data) {
           setChannelData(data.channel);
@@ -42,7 +42,7 @@ const ChannelDetail = () => {
     setloading(true);
     try {
       const { data } = await axios.get(
-        `https://youtube-clone-backend-2jgd.onrender.com/api/video/channelVideos/${channelId}`
+        `https://vidsphere-backend-1l9p.onrender.com/api/video/channelVideos/${channelId}`
       );
 
       if (data) {

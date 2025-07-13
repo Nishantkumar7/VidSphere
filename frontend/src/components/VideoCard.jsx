@@ -17,7 +17,7 @@ const VideoCard = ({
     // fetch videos
     const fetchData = async () => {
       const { data } = await axios.get(
-        `https://youtube-clone-backend-2jgd.onrender.com/api/channel/${channelId}`
+        `https://vidsphere-backend-1l9p.onrender.com/api/channel/${channelId}`
       );
       if (data) {
         setChannelData(data.channel);

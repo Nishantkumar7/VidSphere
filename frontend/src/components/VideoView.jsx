@@ -28,7 +28,7 @@ const VideoView = () => {
     try {
       let uId = user._id;
       const { data } = await axios.put(
-        `https://youtube-clone-backend-2jgd.onrender.com/api/video/likeVideo/${video}`,
+        `https://vidsphere-backend-1l9p.onrender.com/api/video/likeVideo/${video}`,
         { uId },
         {
           headers: {
@@ -58,7 +58,7 @@ const VideoView = () => {
     try {
       let uId = user._id;
       const { data } = await axios.put(
-        `https://youtube-clone-backend-2jgd.onrender.com/api/video/disLikeVideo/${video}`,
+        `https://vidsphere-backend-1l9p.onrender.com/api/video/disLikeVideo/${video}`,
         { uId },
         {
           headers: {
@@ -82,7 +82,7 @@ const VideoView = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data } = await axios.get(`https://youtube-clone-backend-2jgd.onrender.com/api/video/${video}`);
+      const { data } = await axios.get(`https://vidsphere-backend-1l9p.onrender.com/api/video/${video}`);
       if (data) {
         setVideoData(data.video);
         fetchChannelData(data.video.channelId);
@@ -103,7 +103,7 @@ const VideoView = () => {
 
   const fetchChannelVideos = async (id) => {
     try {
-      const { data } = await axios.get(`https://youtube-clone-backend-2jgd.onrender.com/api/video/channelVideos/${id}`);
+      const { data } = await axios.get(`https://vidsphere-backend-1l9p.onrender.com/api/video/channelVideos/${id}`);
       if (data) {
         setChannelVideos(data.videos);
       }
@@ -113,14 +113,14 @@ const VideoView = () => {
   };
 
   const fetchChannelData = async (cId) => {
-    const { data } = await axios.get(`https://youtube-clone-backend-2jgd.onrender.com/api/channel/${cId}`);
+    const { data } = await axios.get(`https://vidsphere-backend-1l9p.onrender.com/api/channel/${cId}`);
     if (data) {
       setChannelData(data.channel);
     }
   };
 
   const fetchVideoComments = async () => {
-    const { data } = await axios.get(`https://youtube-clone-backend-2jgd.onrender.com/api/comment/videoComments/${video}`);
+    const { data } = await axios.get(`https://vidsphere-backend-1l9p.onrender.com/api/comment/videoComments/${video}`);
     if (data) {
       setComments(data.comments);
     }
@@ -143,7 +143,7 @@ const VideoView = () => {
       description: comment,
     };
     try {
-      const data = await axios.post("https://youtube-clone-backend-2jgd.onrender.com/api/comment/addComment", commentData);
+      const data = await axios.post("https://vidsphere-backend-1l9p.onrender.com/api/comment/addComment", commentData);
       if (data) {
         toast.success("comment added");
         fetchVideoComments();
@@ -161,7 +161,7 @@ const VideoView = () => {
     }
     try {
       const { data } = await axios.put(
-        `https://youtube-clone-backend-2jgd.onrender.com/api/channel/subscribeChannel/${channelData?._id}/${user?._id}`,
+        `https://vidsphere-backend-1l9p.onrender.com/api/channel/subscribeChannel/${channelData?._id}/${user?._id}`,
         {},
         {
           headers: {

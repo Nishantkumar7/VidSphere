@@ -28,7 +28,7 @@ const Comment = ({
     const fetchOwner = async () => {
       try {
         const { data } = await axios.get(
-          `https://youtube-clone-backend-2jgd.onrender.com/api/users/${owner}`
+          `https://vidsphere-backend-1l9p.onrender.com/api/users/${owner}`
         );
 
         if (data) {
@@ -46,7 +46,7 @@ const Comment = ({
   const handleDelete = async () => {
     try {
       const result = await axios.delete(
-        `https://youtube-clone-backend-2jgd.onrender.com/api/comment/deleteComment/${id}/${video}/${user?._id}`
+        `https://vidsphere-backend-1l9p.onrender.com/api/comment/deleteComment/${id}/${video}/${user?._id}`
       );
       if (result) {
         toast.success("Comment deleted successfully");
@@ -63,7 +63,7 @@ const Comment = ({
   const handleUpdate = async () => {
     try {
       const result = await axios.put(
-        `https://youtube-clone-backend-2jgd.onrender.com/api/comment/updateComment/${id}/${video}/${user?._id}`,
+        `https://vidsphere-backend-1l9p.onrender.com/api/comment/updateComment/${id}/${video}/${user?._id}`,
         {
           description: editedDescription,
         }

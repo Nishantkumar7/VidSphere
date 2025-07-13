@@ -30,7 +30,7 @@ const Home = () => {
       setLoading(true);
       try {
         const { data } = await axios.get(
-          "https://youtube-clone-backend-2jgd.onrender.com/api/video/"
+          "https://vidsphere-backend-1l9p.onrender.com/api/video/"
         );
         if (data) {
           setvideos(data.videos);

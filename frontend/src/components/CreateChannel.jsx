@@ -29,7 +29,7 @@ const CreateChannel = () => {
     const channelData = { ...formData, owner: user?._id };
     try {
       const result = await axios.post(
-        "https://youtube-clone-backend-2jgd.onrender.com/api/channel/createChannel",
+        "https://vidsphere-backend-1l9p.onrender.com/api/channel/createChannel",
         channelData,
         {
           headers: {
@@ -49,7 +49,7 @@ const CreateChannel = () => {
 
   const fetchCurrentUser = async () => {
     try {
-      const { data } = await axios.get(`https://youtube-clone-backend-2jgd.onrender.com/api/users/${user?._id}`);
+      const { data } = await axios.get(`https://vidsphere-backend-1l9p.onrender.com/api/users/${user?._id}`);
       if (data) {
         dispatch(setUserState(data?.user));
       }
