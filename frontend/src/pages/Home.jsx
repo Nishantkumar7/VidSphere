@@ -77,8 +77,12 @@ const Home = () => {
         {/* video card  */}
 
         {loading ? (
-          <h3>Loading...</h3>
-          <h3>This project’s backend is hosted on a free Render tier and may take up to 90 seconds to start. Please wait!</h3>
+          <>
+      <h3>Loading...</h3>
+      <h3>
+        This project's backend is hosted on a free Render tier and may take up to 90 seconds to start. Please wait!
+      </h3>
+    </>
         ) : (
           <>
             {filteredData && filteredData.length >= 1 ? (
